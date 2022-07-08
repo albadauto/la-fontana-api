@@ -3,7 +3,7 @@ import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Order extends BaseModel {
   @column({ isPrimary: true })
-  public id: number
+  public id_order: number
 
   @column()
   public order:string
@@ -13,6 +13,12 @@ export default class Order extends BaseModel {
 
   @column()
   public id_usr: number
+
+  @column()
+  public price: number
+
+  @column()
+  public obs: string
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime

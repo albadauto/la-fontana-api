@@ -11,7 +11,9 @@ export default class extends BaseSchema {
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
       table.string("order").notNullable();
-      table.string("extra").notNullable();
+      table.string("extra").nullable();
+      table.float("price").notNullable();
+      table.string("obs").notNullable();
       table.integer("id_usr").unsigned().references("id").inTable("users").onDelete("CASCADE");
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })

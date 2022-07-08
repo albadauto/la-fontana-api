@@ -28,4 +28,6 @@ Route.group(() => {
   Route.group(() => {
     Route.post("/createUser", "AuthController.createUser");
   }).prefix("user");
+
+  Route.resource("/orders", "OrdersController").apiOnly();
 }).prefix("api")
