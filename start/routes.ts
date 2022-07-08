@@ -24,4 +24,8 @@ Route.group(() => {
   Route.get('/', async () => {
     return { hello: 'world' }
   })
+
+  Route.group(() => {
+    Route.post("/createUser", "AuthController.createUser");
+  }).prefix("user");
 }).prefix("api")
