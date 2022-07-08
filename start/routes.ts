@@ -30,4 +30,6 @@ Route.group(() => {
   }).prefix("user");
 
   Route.resource("/orders", "OrdersController").apiOnly();
+  Route.resource("/menu", "MenusController").apiOnly();
+
 }).prefix("api")

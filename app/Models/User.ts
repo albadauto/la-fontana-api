@@ -40,6 +40,9 @@ export default class User extends BaseModel {
   public cpf: string;
 
   @column()
+  public type: string
+
+  @column()
   public rememberMeToken?: string
 
   @column.dateTime({ autoCreate: true })

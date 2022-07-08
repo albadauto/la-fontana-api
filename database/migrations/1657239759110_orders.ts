@@ -14,6 +14,8 @@ export default class extends BaseSchema {
       table.string("extra").nullable();
       table.float("price").notNullable();
       table.string("obs").notNullable();
+      table.string("status").notNullable();
+      table.string("type").notNullable();
       table.integer("id_usr").unsigned().references("id").inTable("users").onDelete("CASCADE");
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
