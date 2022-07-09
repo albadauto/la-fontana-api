@@ -11,14 +11,12 @@ export default class OrdersController {
                      created: true,
                      message: "Pedido feito com sucesso!"
                 })
-            }else{
-                return response.status(200).json({
-                    created: false,
-                    message: "Verifique as informações e tente novamente"
-               })
             }
         }catch(err){
-            console.log(err);
+            return response.status(200).json({
+                created: false,
+                message: "Verifique as informações e tente novamente"
+           })
         }
     }
     
