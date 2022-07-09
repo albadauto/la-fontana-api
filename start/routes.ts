@@ -27,6 +27,7 @@ Route.group(() => {
 
   Route.group(() => {
     Route.post("/createUser", "AuthController.createUser");
+    Route.post("/verifyLogin", "AuthController.verifyPassword")
   }).prefix("user");
 
   Route.resource("/orders", "OrdersController").apiOnly();

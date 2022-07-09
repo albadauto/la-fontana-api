@@ -23,7 +23,10 @@ export default class MenusController {
                 })
             }
         } catch (err) {
-            console.log(err);
+            return response.status(400).json({
+                created: false,
+                message: "Erro: Verifique se todas as informações são válidas!"
+            })
         }
     }
 
@@ -31,7 +34,6 @@ export default class MenusController {
     public async show({ response, params }: HttpContextContract) {
         try {
             const result = await Menu.findOrFail(params.id);
-
             return response.status(200).json({
                 find: true,
                 result
@@ -50,7 +52,7 @@ export default class MenusController {
         }
     }
 
-    
+
 }
 
 

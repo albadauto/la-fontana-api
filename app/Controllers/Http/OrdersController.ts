@@ -27,7 +27,7 @@ export default class OrdersController {
  *      order: refri, marmitex, doce, sla,
  *      extra: sla oq, velas de aniversario,
  *      id_usr: 43 <- ID DO USUARIO Q FEZ O PEDIDO
- *    
+ *      price: 50.00
  *  }
  * 
  */
